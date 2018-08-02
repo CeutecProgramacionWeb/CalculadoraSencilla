@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <h1>
+      Calculadora
+    </h1>
+    <style type="text/css">
+        input{
+            width: 30%;
+        }
+        button{
+            width: 15%;
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function calculate(operation){
+            var firstNumber = parseInt(document.getElementById('firstNumber').value);
+            var secondNumber = parseInt(document.getElementById('secondNumber').value);
+            var result = document.getElementById('result');
+            switch(operation){
+                case '+':
+                    result.value = firstNumber + secondNumber;
+                break;
+                case '-':
+                     result.value = firstNumber - secondNumber;
+                break;
+                case '*':
+                    result.value = firstNumber * secondNumber;
+                break;
+                case '/':
+                    result.value = firstNumber / secondNumber;
+                break;
+                case '%':
+                    result.value = firstNumber % secondNumber;
+                break;
+            }
+            
+        }
+    </script>
+  </head>
+  <input id="firstNumber" type="number">
+  <input id="secondNumber" type="number">
+  <label> = </label>
+  <input id="result" type="number" disabled>
+  <br>
+  <br>
+  <div>
+    <button onclick="calculate('+');">+</button>
+    <button onclick="calculate('-');">-</button>
+    <button onclick="calculate('*');">*</button>
+    <button onclick="calculate('/');">/</button>
+    <button onclick="calculate('%');">%</button>
+  </div>
+ 
+</html>
